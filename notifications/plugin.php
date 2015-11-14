@@ -16,8 +16,8 @@
       Last Modified: 2015.11.15
  Plugin Description: Receive email notifications from phpMussel whenever a file
                      upload is blocked (requires PHP "mail" function to be
-					 correctly configured; for more information, please refer
-					 to http://php.net/manual/en/function.mail.php).
+                     correctly configured; for more information, please refer
+                     to http://php.net/manual/en/function.mail.php).
  PLUGIN INFORMATION END */
 
 if(!defined('phpMussel'))die('[phpMussel] This should not be accessed directly.');
