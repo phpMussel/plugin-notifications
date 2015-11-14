@@ -1,0 +1,8 @@
+Hi,
+
+This is an automated email from phpMussel to notify you that an attempted file upload has been blocked.
+
+Time/Date: {time}
+Originating IP Address: {ipaddr}
+Reason Blocked: {whyflagged}
+
