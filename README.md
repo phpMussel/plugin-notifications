@@ -12,7 +12,7 @@ This repository: [phpMussel-plugin-notifications](https://github.com/Maikuolan/p
 
 ## **How to install?**
 
-1. Add the following section to your `phpmussel.ini` file and edit accordingly:
+Add the following section to your `phpmussel.ini` file and edit accordingly:
 
 ```
 [notifications]
@@ -22,6 +22,8 @@ to_addr='username@domain.tld'
 from_addr='username@domain.tld'
 ```
 
-2. Upload the "notifications" directory of this repository and all its contents to the "plugins" directory of your phpMussel installation (the "plugins" directory is a sub-directory of the "vault" directory).
+Upload the "notifications" directory of this repository and all its contents to the "plugins" directory of your phpMussel installation (the "plugins" directory is a sub-directory of the "vault" directory).
 
 That's everything! :-)
+
+*This file, "README.md", last edited: 15th November 2015 (2015.11.15).*
