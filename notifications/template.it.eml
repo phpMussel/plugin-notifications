@@ -1,0 +1,8 @@
+Salve,
+
+Questa è un'email automatica da phpMussel per informare l'utente che un caricamento di file tentativo è stato bloccato.
+
+Tempo/Data: {time}
+IP Indirizzo di Origine: {ipaddr}
+Motivo Bloccati: {whyflagged}
+

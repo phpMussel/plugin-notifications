@@ -1,0 +1,8 @@
+Hola,
+
+Este es un email automático de phpMussel para notificar que una intentado subir de archivos ha sido bloqueado.
+
+Hora/Fecha: {time}
+Originario IP Dirección: {ipaddr}
+Razón Bloqueado: {whyflagged}
+

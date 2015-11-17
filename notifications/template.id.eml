@@ -1,0 +1,8 @@
+Hai,
+
+Ini adalah email otomatis dari phpMussel untuk memberitahu Anda bahwa file upload adalah diblokir.
+
+Waktu/Tanggal: {time}
+IP Address Berasal: {ipaddr}
+Alasan Diblokir: {whyflagged}
+
