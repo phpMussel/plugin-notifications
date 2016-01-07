@@ -1,0 +1,17 @@
+{
+    "name": "maikuolan/phpmussel-plugin-notifications",
+    "description": "A phpMussel plugin to receive email notifications from phpMussel whenever a file upload is blocked.",
+    "keywords": ["anti-virus","anti-trojan","anti-malware","anti-exploit","anti-spam","antivirus","uploads","security","protection"],
+    "homepage": "http://maikuolan.github.io/phpMussel/",
+    "license": "GPL-2.0+",
+    "support": {
+        "issues": "https://github.com/Maikuolan/phpMussel-plugin-notifications/issues",
+        "forum": "http://www.spambotsecurity.com/forum/viewforum.php?f=55",
+        "wiki": "https://github.com/Maikuolan/phpMussel-plugin-notifications/wiki",
+        "source": "https://github.com/Maikuolan/phpMussel-plugin-notifications"
+    },
+    "require": {
+        "php": ">=5.4.0",
+        "maikuolan/phpmussel": ">=0.9.0"
+    }
+}
