@@ -13,7 +13,7 @@
     Min. Compatible: 0.9.0
     Max. Compatible: -
        Tested up to: 0.9.2
-      Last Modified: 2016.12.08
+      Last Modified: 2016.01.08
  Plugin Description: Receive email notifications from phpMussel whenever a file
                      upload is blocked (requires PHP "mail" function to be
                      correctly configured; for more information, please refer
