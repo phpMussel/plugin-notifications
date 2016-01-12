@@ -13,7 +13,7 @@
     Min. Compatible: 0.9.0
     Max. Compatible: -
        Tested up to: 0.9.2
-      Last Modified: 2016.01.08
+      Last Modified: 2016.01.10
  Plugin Description: Receive email notifications from phpMussel whenever a file
                      upload is blocked (requires PHP "mail" function to be
                      correctly configured; for more information, please refer
@@ -23,9 +23,8 @@
 /**
  * Notifications plugin for phpMussel.
  *
- * Receive email notifications from phpMussel whenever a file upload is blocked
- * (requires PHP "mail" function to be correctly configured; for more
- * information, please refer to http://php.net/manual/en/function.mail.php).
+ * Receive email notifications from phpMussel whenever a file upload is blocked (requires PHP "mail" function to be
+ * correctly configured; for more information, please refer to http://php.net/manual/en/function.mail.php).
  *
  * This document and its associated package can be downloaded for free from:
  * - GitHub <https://github.com/Maikuolan/phpMussel-plugin-notifications>.
@@ -34,8 +33,7 @@
  */
 
 /**
- * Prevents direct access (the plugin should only be called from the phpMussel
- * plugin system).
+ * Prevents direct access (the plugin should only be called from the phpMussel plugin system).
  */
 if(!defined('phpMussel'))die('[phpMussel] This should not be accessed directly.');
 
@@ -49,8 +47,7 @@ if(!isset($MusselConfig['notifications']['to_addr']))$MusselConfig['notification
 if(!isset($MusselConfig['notifications']['from_addr']))$MusselConfig['notifications']['from_addr']='';
 
 /**
- * The actual plugin code (the "Notifications" plugin only has one small
- * function; nothing else is needed).
+ * The actual plugin code (the "Notifications" plugin only has one small function; nothing else is needed).
  *
  * @param array $input An empty array (we don't need to send anything from the calling scope to the function, but, the plugin system nonetheless requires this parameter to exist).
  * @return bool Returns true if everything is working correctly.
