@@ -10,7 +10,7 @@ This repository, "phpMussel-plugin-notifications", is the repository for a phpMu
 
 The main repository: [phpMussel](https://github.com/Maikuolan/phpMussel).
 
-This repository: [phpMussel-plugin-notifications](https://github.com/Maikuolan/phpMussel-plugin-notifications).
+This repository: [phpMussel-plugin-notifications](https://github.com/phpMussel/phpMussel-plugin-notifications).
 
 ---
 
