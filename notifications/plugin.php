@@ -5,12 +5,12 @@
  * PLUGIN INFORMATION BEGIN
  *         Plugin Name: Notifications.
  *       Plugin Author: Caleb M / Maikuolan.
- *      Plugin Version: 1.0.3
+ *      Plugin Version: 1.0.4
  *    Download Address: https://github.com/phpMussel/plugin-notifications
  *     Min. Compatible: 0.10.0
  *     Max. Compatible: -
  *        Tested up to: 1.0.0-DEV
- *       Last Modified: 2016.05.29
+ *       Last Modified: 2016.06.27
  * PLUGIN INFORMATION END
  *
  * Receive email notifications from phpMussel whenever a file upload is
@@ -27,16 +27,16 @@ if (!defined('phpMussel')) {
 }
 
 /** Fallback for missing "notifications" configuration category. */
-if (!isset($phpMussel['MusselConfig']['notifications'])) {
-    $phpMussel['MusselConfig']['notifications'] = array();
+if (!isset($phpMussel['Config']['notifications'])) {
+    $phpMussel['Config']['notifications'] = array();
 }
 /** Fallback for missing "to_addr" configuration directive. */
-if (!isset($phpMussel['MusselConfig']['notifications']['to_addr'])) {
-    $phpMussel['MusselConfig']['notifications']['to_addr'] = '';
+if (!isset($phpMussel['Config']['notifications']['to_addr'])) {
+    $phpMussel['Config']['notifications']['to_addr'] = '';
 }
 /** Fallback for missing "from_addr" configuration directive. */
-if (!isset($phpMussel['MusselConfig']['notifications']['from_addr'])) {
-    $phpMussel['MusselConfig']['notifications']['from_addr'] = '';
+if (!isset($phpMussel['Config']['notifications']['from_addr'])) {
+    $phpMussel['Config']['notifications']['from_addr'] = '';
 }
 
 /**
@@ -63,27 +63,27 @@ if (function_exists('phpMussel_Register_Hook')) {
     function phpMussel_Notify($input) {
         global $phpMussel;
         if (
-            empty($phpMussel['MusselConfig']['notifications']['to_addr']) ||
-            empty($phpMussel['MusselConfig']['notifications']['from_addr']) ||
+            empty($phpMussel['Config']['notifications']['to_addr']) ||
+            empty($phpMussel['Config']['notifications']['from_addr']) ||
             empty($phpMussel['whyflagged'])
         ) {
         return false;
         }
         $NotifyLang =
-            (!file_exists($phpMussel['vault'] . 'plugins/notifications/template.' . $phpMussel['MusselConfig']['general']['lang'] . '.eml')) ?
+            (!file_exists($phpMussel['vault'] . 'plugins/notifications/template.' . $phpMussel['Config']['general']['lang'] . '.eml')) ?
             'en' :
-            $phpMussel['MusselConfig']['general']['lang'];
+            $phpMussel['Config']['general']['lang'];
         $content = phpMusselV(array(
             'whyflagged' => $phpMussel['whyflagged'],
-            'ipaddr' => $_SERVER[$phpMussel['MusselConfig']['general']['ipaddr']],
+            'ipaddr' => $_SERVER[$phpMussel['Config']['general']['ipaddr']],
             'time' => date('r')
         ), phpMusselFile($phpMussel['vault'] . 'plugins/notifications/template.' . $NotifyLang . '.eml', 0, true));
         mail(
-            $phpMussel['MusselConfig']['notifications']['to_addr'],
-            $phpMussel['MusselConfig']['lang']['denied'],
+            $phpMussel['Config']['notifications']['to_addr'],
+            $phpMussel['Config']['lang']['denied'],
             $content,
-            "MIME-Version: 1.0\nContent-type: text/plain; charset=iso-8859-1\nFrom: " . $phpMussel['MusselConfig']['notifications']['from_addr'],
-            '-f' . $phpMussel['MusselConfig']['notifications']['from_addr']
+            "MIME-Version: 1.0\nContent-type: text/plain; charset=iso-8859-1\nFrom: " . $phpMussel['Config']['notifications']['from_addr'],
+            '-f' . $phpMussel['Config']['notifications']['from_addr']
         );
         return true;
     }
@@ -104,27 +104,27 @@ if (function_exists('phpMussel_Register_Hook')) {
      */
     $phpMussel_Notifications = function () use (&$phpMussel) {
         if (
-            empty($phpMussel['MusselConfig']['notifications']['to_addr']) ||
-            empty($phpMussel['MusselConfig']['notifications']['from_addr']) ||
+            empty($phpMussel['Config']['notifications']['to_addr']) ||
+            empty($phpMussel['Config']['notifications']['from_addr']) ||
             empty($phpMussel['whyflagged'])
         ) {
         return false;
         }
         $NotifyLang =
-            (!file_exists($phpMussel['vault'] . 'plugins/notifications/template.' . $phpMussel['MusselConfig']['general']['lang'] . '.eml')) ?
+            (!file_exists($phpMussel['vault'] . 'plugins/notifications/template.' . $phpMussel['Config']['general']['lang'] . '.eml')) ?
             'en' :
-            $phpMussel['MusselConfig']['general']['lang'];
+            $phpMussel['Config']['general']['lang'];
         $content = $phpMussel['ParseVars'](array(
             'whyflagged' => $phpMussel['whyflagged'],
-            'ipaddr' => $_SERVER[$phpMussel['MusselConfig']['general']['ipaddr']],
+            'ipaddr' => $_SERVER[$phpMussel['Config']['general']['ipaddr']],
             'time' => date('r')
         ), $phpMussel['ReadFile']($phpMussel['vault'] . 'plugins/notifications/template.' . $NotifyLang . '.eml', 0, true));
         mail(
-            $phpMussel['MusselConfig']['notifications']['to_addr'],
-            $phpMussel['MusselConfig']['lang']['denied'],
+            $phpMussel['Config']['notifications']['to_addr'],
+            $phpMussel['Config']['lang']['denied'],
             $content,
-            "MIME-Version: 1.0\nContent-type: text/plain; charset=iso-8859-1\nFrom: " . $phpMussel['MusselConfig']['notifications']['from_addr'],
-            '-f' . $phpMussel['MusselConfig']['notifications']['from_addr']
+            "MIME-Version: 1.0\nContent-type: text/plain; charset=iso-8859-1\nFrom: " . $phpMussel['Config']['notifications']['from_addr'],
+            '-f' . $phpMussel['Config']['notifications']['from_addr']
         );
         return true;
     };
