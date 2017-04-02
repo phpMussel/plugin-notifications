@@ -1,8 +1,0 @@
-Olá,
-
-Este é um e-mail automático de phpMussel para notificá-lo que um arquivo carregamento tentado foi bloqueado.
-
-Tempo/Data: {time}
-IP Endereço de Origem: {ipaddr}
-Motivo Bloqueado: {whyflagged}
-

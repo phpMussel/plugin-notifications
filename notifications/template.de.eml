@@ -1,8 +1,0 @@
-Hallo,
-
-Dies ist eine automatisch erstelle Email von phpMussel um dich zu informieren, dass ein versuchter Dateiupload blockiert wurde.
-
-Zeit/Datum: {time}
-Ursprungs-IP-Adresse: {ipaddr}
-Grund der Blockierung: {whyflagged}
-

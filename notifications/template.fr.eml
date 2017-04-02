@@ -1,8 +1,0 @@
-Salut,
-
-Ceci est un message automatique de phpMussel pour vous informer qu'un tentative de téléchargement d'un fichier a été bloquée.
-
-Temps/Date: {time}
-Adresse IP d'Origine: {ipaddr}
-Raison Bloquée: {whyflagged}
-
