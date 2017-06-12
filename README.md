@@ -32,4 +32,4 @@ That's everything! :-)
 
 ---
 
-*This file, "README.md", last edited: 29th May 2016 (2016.05.29).*
+*This file, "README.md", last edited: 12th June 2017 (2017.06.12).*
