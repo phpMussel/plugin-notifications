@@ -2,7 +2,7 @@
     "name": "phpmussel/plugin-notifications",
     "description": "A phpMussel plugin to receive email notifications from phpMussel whenever a file upload is blocked.",
     "keywords": ["anti-virus","anti-trojan","anti-malware","anti-exploit","anti-spam","antivirus","uploads","security","protection"],
-    "homepage": "http://maikuolan.github.io/phpMussel/",
+    "homepage": "https://phpmussel.github.io/",
     "license": "GPL-2.0+",
     "support": {
         "issues": "https://github.com/phpMussel/plugin-notifications/issues",
@@ -12,6 +12,6 @@
     },
     "require": {
         "php": ">=5.4.0",
-        "maikuolan/phpmussel": ">=1.0.0-DEV"
+        "phpmussel/phpmussel": ">=1.0.0-DEV"
     }
 }
