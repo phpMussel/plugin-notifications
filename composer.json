@@ -5,8 +5,8 @@
     "homepage": "https://phpmussel.github.io/",
     "license": "GPL-2.0+",
     "support": {
+        "chat": "https://gitter.im/phpMussel2/Lobby",
         "issues": "https://github.com/phpMussel/plugin-notifications/issues",
-        "forum": "http://www.spambotsecurity.com/forum/viewforum.php?f=55",
         "wiki": "https://github.com/phpMussel/plugin-notifications/wiki",
         "source": "https://github.com/phpMussel/plugin-notifications"
     },
