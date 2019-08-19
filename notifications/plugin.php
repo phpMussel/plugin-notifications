@@ -67,10 +67,10 @@ $phpMussel_Notifications = function () use (&$phpMussel) {
         'whyflagged' => $phpMussel['whyflagged'],
         'ipaddr' => $_SERVER[$phpMussel['Config']['general']['ipaddr']],
         'time' => date('r')
-    ], $phpMussel['Notifications-L10N']['notifications_template']);
+    ], $phpMussel['L10N']->getString('notifications_template'));
     mail(
         $phpMussel['Config']['notifications']['to_addr'],
-        $phpMussel['Notifications-L10N']['denied'],
+        $phpMussel['L10N']->getString('denied'),
         $Content,
         "MIME-Version: 1.0\nContent-type: text/plain; charset=iso-8859-1\nFrom: " . $phpMussel['Config']['notifications']['from_addr'],
         '-f' . $phpMussel['Config']['notifications']['from_addr']
