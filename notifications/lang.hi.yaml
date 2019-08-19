@@ -1,0 +1,15 @@
+##\
+# This file is a part of the phpMussel notifications plugin package.
+# Homepage: https://github.com/phpMussel/plugin-notifications
+#
+# This file: Hindi language data (last modified: 2019.08.19).
+##/
+
+config_notifications_to_addr: "को सूचनाएं भेजने के लिए ईमेल पता।"
+config_notifications_from_addr: "से सूचनाएं भेजने के लिए ईमेल पता।"
+notifications_template: |
+ नमस्ते,
+ यह phpMussel का एक स्वचालित ईमेल है जो आपको सूचित करता है कि एक फ़ाइल अपलोड का प्रयास अवरुद्ध हो गया है।
+ समय/दिनांक: {time}
+ IP ​​पते की उत्पत्ति: {ipaddr}
+ कारण अवरुद्ध: {whyflagged}

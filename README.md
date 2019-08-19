@@ -4,6 +4,7 @@ An ideal solution for shared hosting environments, where it's often not possible
 
 ---
 
+
 ## **What's this repository for?**
 
 This repository, "plugin-notifications", is the repository for a phpMussel plugin that allows you to receive email notifications from phpMussel whenever a file upload is blocked (requires PHP "mail" function to be correctly configured).
@@ -14,9 +15,10 @@ This repository: [plugin-notifications](https://github.com/phpMussel/plugin-noti
 
 ---
 
+
 ## **How to install?**
 
-Add the following section to your `phpmussel.ini` file and edit accordingly:
+If you're installing it manually, add the following section to your configuration file (`config.ini`) and edit accordingly:
 
 ```
 [notifications]
@@ -26,10 +28,13 @@ to_addr='username@domain.tld'
 from_addr='username@domain.tld'
 ```
 
-Upload the "notifications" directory of this repository and all its contents to the "plugins" directory of your phpMussel installation (the "plugins" directory is a sub-directory of the "vault" directory).
+After that, you'll need to upload the "notifications" directory of this repository and all its contents to the "plugins" directory of your phpMussel installation.
+
+Otherwise, if you're installing it via the front-end updates page, you can modify your configuration accordingly via the front-end configuration page (all necessary files will be installed automatically).
 
 That's everything! :-)
 
 ---
 
-*This file, "README.md", last edited: 12th June 2017 (2017.06.12).*
+
+Last Updated: 19 August 2019 (2019.08.19).

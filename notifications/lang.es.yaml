@@ -1,0 +1,15 @@
+##\
+# This file is a part of the phpMussel notifications plugin package.
+# Homepage: https://github.com/phpMussel/plugin-notifications
+#
+# This file: Spanish language data (last modified: 2019.08.19).
+##/
+
+config_notifications_to_addr: "La dirección de email para la recepción de notificaciones."
+config_notifications_from_addr: "La dirección de email para el envío de notificaciones."
+notifications_template: |
+ Hola,
+ Este es un email automático de phpMussel para notificar que una intentado subir de archivos ha sido bloqueado.
+ Hora/Fecha: {time}
+ Originario IP Dirección: {ipaddr}
+ Razón Bloqueado: {whyflagged}

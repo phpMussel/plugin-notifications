@@ -1,0 +1,15 @@
+##\
+# This file is a part of the phpMussel notifications plugin package.
+# Homepage: https://github.com/phpMussel/plugin-notifications
+#
+# This file: Chinese (simplified) language data (last modified: 2019.08.19).
+##/
+
+config_notifications_to_addr: "用于向其发送通知的电子邮件地址。"
+config_notifications_from_addr: "用于发送通知的电子邮件地址。"
+notifications_template: |
+ 你好，
+ 这是来自phpMussel的自动电子邮件，通知您已尝试上传文件已被阻止。
+ 时间/日期： {time}
+ 起源IP地址： {ipaddr}
+ 理由被阻止： {whyflagged}

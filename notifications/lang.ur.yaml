@@ -1,0 +1,15 @@
+##\
+# This file is a part of the phpMussel notifications plugin package.
+# Homepage: https://github.com/phpMussel/plugin-notifications
+#
+# This file: Urdu language data (last modified: 2019.08.19).
+##/
+
+config_notifications_to_addr: "کو اطلاعات بھیجنے کے لئے ای میل ایڈریس."
+config_notifications_from_addr: "سے اطلاعات بھیجنے کے لئے ای میل ایڈریس."
+notifications_template: |
+ ہیلو،
+ آپ کو مطلع کرنے کے لئے یہ phpMussel کی طرف سے ایک خودکار ای میل ہے جس میں فائل اپلوڈ کرنے کی کوشش کی گئی ہے.
+ وقت/تاریخ: {time}
+ اصل IP ایڈریس: {ipaddr}
+ مسدود ہونے کی وجہ: {whyflagged}

@@ -1,0 +1,15 @@
+##\
+# This file is a part of the phpMussel notifications plugin package.
+# Homepage: https://github.com/phpMussel/plugin-notifications
+#
+# This file: Vietnamese language data (last modified: 2019.08.19).
+##/
+
+config_notifications_to_addr: "Địa chỉ email cho thông báo của người nhận."
+config_notifications_from_addr: "Địa chỉ email cho thông báo của người gửi."
+notifications_template: |
+ Xin chào,
+ Đây là một email tự động từ phpMussel để thông báo cho bạn rằng một tập tin tải lên đã bị chặn.
+ Thời gian / ngày: {time}
+ Có nguồn gốc IP địa chỉ: {ipaddr}
+ Lý do bị chặn: {whyflagged}

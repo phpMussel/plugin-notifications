@@ -1,0 +1,15 @@
+##\
+# This file is a part of the phpMussel notifications plugin package.
+# Homepage: https://github.com/phpMussel/plugin-notifications
+#
+# This file: Bangla language data (last modified: 2019.08.19).
+##/
+
+config_notifications_to_addr: "বিজ্ঞপ্তি প্রেরণের জন্য ইমেল ঠিকানা।"
+config_notifications_from_addr: "থেকে বিজ্ঞপ্তি প্রেরণের জন্য ইমেল ঠিকানা।"
+notifications_template: |
+ হাই,
+ এটি আপনাকে জানাতে phpMussel থেকে একটি স্বয়ংক্রিয় ইমেল যা চেষ্টা করা ফাইল আপলোডকে অবরুদ্ধ করা হয়েছে।
+ সময়/তারিখ: {time}
+ মূল IP ঠিকানা: {ipaddr}
+ কারণ অবরুদ্ধ: {whyflagged}

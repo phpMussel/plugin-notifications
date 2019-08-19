@@ -1,0 +1,15 @@
+##\
+# This file is a part of the phpMussel notifications plugin package.
+# Homepage: https://github.com/phpMussel/plugin-notifications
+#
+# This file: German language data (last modified: 2019.08.19).
+##/
+
+config_notifications_to_addr: "Die E-Mail-Adresse um Benachrichtigungen zu senden an."
+config_notifications_from_addr: "Die E-Mail-Adresse um Benachrichtigungen zu senden von."
+notifications_template: |
+ Hallo,
+ Dies ist eine automatisch erstelle Email von phpMussel um dich zu informieren, dass ein versuchter Dateiupload blockiert wurde.
+ Zeit/Datum: {time}
+ Ursprungs-IP-Adresse: {ipaddr}
+ Grund der Blockierung: {whyflagged}

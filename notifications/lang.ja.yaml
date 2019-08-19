@@ -1,0 +1,15 @@
+##\
+# This file is a part of the phpMussel notifications plugin package.
+# Homepage: https://github.com/phpMussel/plugin-notifications
+#
+# This file: Japanese language data (last modified: 2019.08.19).
+##/
+
+config_notifications_to_addr: "通知を受信人のＥメールアドレス。"
+config_notifications_from_addr: "通知を差出人のＥメールアドレス。"
+notifications_template: |
+ こんにちは、
+ これはphpMusselからの自動通知です。 ファイルのアップロードがブロックされました。
+ 時間/日/月/年： {time}
+ 発信元ＩＰアドレス： {ipaddr}
+ ブロックされた理由： {whyflagged}

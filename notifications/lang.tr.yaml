@@ -1,0 +1,15 @@
+##\
+# This file is a part of the phpMussel notifications plugin package.
+# Homepage: https://github.com/phpMussel/plugin-notifications
+#
+# This file: Turkish language data (last modified: 2019.08.19).
+##/
+
+config_notifications_to_addr: "Bildirimlerin alınacağı e-posta adresi."
+config_notifications_from_addr: "Bildirimlerin gönderileceği e-posta adresi."
+notifications_template: |
+ Merhaba,
+ Bu phpMussel'den gelen otomatik bir e-postadır. Bir dosya girişimi engellendi.
+ Zaman/Tarih: {time}
+ Kaynak IP Adresi: {ipaddr}
+ Sebep Engellendi: {whyflagged}

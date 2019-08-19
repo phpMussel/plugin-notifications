@@ -12,6 +12,6 @@
     },
     "require": {
         "php": ">=5.4.0",
-        "phpmussel/phpmussel": ">=1.0.0-DEV"
+        "phpmussel/phpmussel": ">=1.12.0"
     }
 }

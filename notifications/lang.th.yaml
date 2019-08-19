@@ -1,0 +1,15 @@
+##\
+# This file is a part of the phpMussel notifications plugin package.
+# Homepage: https://github.com/phpMussel/plugin-notifications
+#
+# This file: Thai language data (last modified: 2019.08.19).
+##/
+
+config_notifications_to_addr: "ที่อยู่อีเมลสำหรับส่งการแจ้งเตือนไปยัง."
+config_notifications_from_addr: "ที่อยู่อีเมลสำหรับส่งการแจ้งเตือนจาก."
+notifications_template: |
+ สวัสดี,
+ นี่คืออีเมลอัตโนมัติจาก phpMussel เพื่อแจ้งให้คุณทราบว่าการอัปโหลดไฟล์ที่พยายามถูกบล็อก.
+ เวลา/วันที่: {time}
+ ที่อยู่ IP ต้นทาง: {ipaddr}
+ เหตุผลที่ถูกบล็อก: {whyflagged}

@@ -5,12 +5,12 @@
  * PLUGIN INFORMATION BEGIN
  *         Plugin Name: Notifications.
  *       Plugin Author: Caleb M / Maikuolan.
- *      Plugin Version: 2.0.0
+ *      Plugin Version: 3.0.0
  *    Download Address: https://github.com/phpMussel/plugin-notifications
- *     Min. Compatible: 1.0.0-DEV
+ *     Min. Compatible: 1.12.0
  *     Max. Compatible: -
- *        Tested up to: 1.0.0-DEV
- *       Last Modified: 2017.04.03
+ *        Tested up to: 2.0.0
+ *       Last Modified: 2019.08.19
  * PLUGIN INFORMATION END
  *
  * Receive email notifications from phpMussel whenever a file upload is
@@ -26,14 +26,16 @@ if (!defined('phpMussel')) {
 }
 
 /** Configuration defaults. */
-$phpMussel['Config']['Config Defaults']['notifications'] = array(
-    'to_addr' => array('type' => 'string', 'default' => ''),
-    'from_addr' => array('type' => 'string', 'default' => '')
-);
+$phpMussel['Config']['Config Defaults']['notifications'] = [
+    'to_addr' => ['type' => 'string', 'default' => ''],
+    'from_addr' => ['type' => 'string', 'default' => '']
+];
+
 /** Configuration category fallback. */
 if (!isset($phpMussel['Config']['notifications'])) {
-    $phpMussel['Config']['notifications'] = array();
+    $phpMussel['Config']['notifications'] = [];
 }
+
 /** Configuration directive fallbacks. */
 array_walk($phpMussel['Config']['Config Defaults']['notifications'], function ($Values, $Key) use (&$phpMussel) {
     if (!isset($phpMussel['Config']['notifications'][$Key])) {
@@ -41,16 +43,6 @@ array_walk($phpMussel['Config']['Config Defaults']['notifications'], function ($
     }
     $phpMussel['AutoType']($phpMussel['Config']['notifications'][$Key], $Values['type']);
 });
-
-/** Fetch plugin L10N data. */
-if (file_exists($phpMussel['pluginPath'] . 'notifications/lang.' . $phpMussel['Config']['general']['lang'] . '.php')) {
-    require $phpMussel['pluginPath'] . 'notifications/lang.' . $phpMussel['Config']['general']['lang'] . '.php';
-} elseif (file_exists($phpMussel['pluginPath'] . 'notifications/lang.en.php')) {
-    require $phpMussel['pluginPath'] . 'notifications/lang.en.php';
-} else {
-    header('Content-Type: text/plain');
-    die('[phpMussel] Unable to load L10N data for the notifications plugin.');
-}
 
 /**
  * Registers the `$phpMussel_Notifications` closure to the `before_html_out`
@@ -71,14 +63,14 @@ $phpMussel_Notifications = function () use (&$phpMussel) {
     ) {
         return false;
     }
-    $Content = $phpMussel['ParseVars'](array(
+    $Content = $phpMussel['ParseVars']([
         'whyflagged' => $phpMussel['whyflagged'],
         'ipaddr' => $_SERVER[$phpMussel['Config']['general']['ipaddr']],
         'time' => date('r')
-    ), $phpMussel['lang']['notifications_template']);
+    ], $phpMussel['Notifications-L10N']['notifications_template']);
     mail(
         $phpMussel['Config']['notifications']['to_addr'],
-        $phpMussel['lang']['denied'],
+        $phpMussel['Notifications-L10N']['denied'],
         $Content,
         "MIME-Version: 1.0\nContent-type: text/plain; charset=iso-8859-1\nFrom: " . $phpMussel['Config']['notifications']['from_addr'],
         '-f' . $phpMussel['Config']['notifications']['from_addr']

@@ -1,0 +1,15 @@
+##\
+# This file is a part of the phpMussel notifications plugin package.
+# Homepage: https://github.com/phpMussel/plugin-notifications
+#
+# This file: French language data (last modified: 2019.08.19).
+##/
+
+config_notifications_to_addr: "L'adresse électronique pour recevoir les notifications."
+config_notifications_from_addr: "L'adresse email pour envoyer les notifications."
+notifications_template: |
+ Salut,
+ Ceci est un message automatique de phpMussel pour vous informer qu'un tentative de téléchargement d'un fichier a été bloquée.
+ Temps/Date: {time}
+ Adresse IP d'Origine: {ipaddr}
+ Raison Bloquée: {whyflagged}

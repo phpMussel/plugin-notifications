@@ -2,7 +2,7 @@
 # phpMussel repository can be found here:
 # https://github.com/phpMussel/phpMussel/
 
-# Written based on the .gitattributes guide available from:
+# Refer to:
 # https://help.github.com/articles/dealing-with-line-endings/
 
 * text eol=lf
